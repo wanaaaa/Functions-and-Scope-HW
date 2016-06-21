@@ -12,10 +12,17 @@ public class Main {
 
         // 1) Complete the setStoreName() method below and use it to save your store's name
         setStoreName("put your store's name here, e.g. Bob's Discount Warehouse");
+        public static String setStoreName (String str){
+            return str
+        }
+
 
         // 2) Complete the greetCustomer() method below
         String greeting = greetCustomer("put a customer name here");
         System.out.println(greeting);
+        public static String greetCustomer (String str) {
+            return "Hi " + str
+        }
 
 
         // 3) Complete the getSalePrice() method below and make sure the correct value is printed here
@@ -23,6 +30,9 @@ public class Main {
         Double discount = 0.25; // a 25% discount
         Double salePrice = getSalePrice(originalPrice, discount);
         System.out.println("25% off $79.99 is $" + salePrice);
+        public  static int getSalePrice (int num) {
+            return originalPrice*discount
+        }
 
         // you can also nest a call to getSalePrice() inside a call to println()
         System.out.println("15% off $24.95 is $" + getSalePrice(24.95, 0.15));
@@ -31,6 +41,9 @@ public class Main {
         // 4) Complete the getClearancePrice() method below and make sure correct value is printed here
         Double clearancePrice = getClearancePrice(originalPrice, discount);
         System.out.println("take an extra 50% off after the 25% discount from $79.99: $" + clearancePrice);
+        public static int getClearancePrice (int num1, int num2) {
+            return originalPrice*(1-discount)*0.5
+        }
 
 
         // 5) Complete the getBulkDiscount() method below. Apply it to get a sale price.
@@ -39,6 +52,9 @@ public class Main {
         double itemPrice = 19.99;
         double salePriceForEachItem = getSalePrice(itemPrice, bulkDiscount);
         System.out.println("price after bulk discount: $" + salePriceForEachItem);
+        public static int getBulkDiscount (int num) {
+            return num*itemPrice
+        }
 
         // you can also nest all these method calls together:
         System.out.println("bulk discount price: $" + getSalePrice(100.0, getBulkDiscount(28)));
